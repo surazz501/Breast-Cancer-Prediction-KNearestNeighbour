@@ -44,7 +44,7 @@
         <div class="note">
             <p>This is a breast cancer prediction app demo</p>
         </div>
-        <div class="col-md-12" style=" text-align: center; color: blue; padding:2px;"><span style="padding:10px;">Breast Cancer Class is <b>{{ prediction_text }}</b></span></div>
+        <div class="col-md-12" style=" text-align: center; color: blue; padding:2px;"><span style="padding:10px;"><b>{{ prediction_text }}</b></span></div>
         <form action="{{ url_for('predict')}}" method="post">
             <label>Fill the form to predict</label>
             <div class="form-content">
