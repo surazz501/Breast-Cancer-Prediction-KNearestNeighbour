@@ -28,9 +28,9 @@ def predict():
             my_prediction = model.predict(data)
             str_set = set(my_prediction)
             if 2 in str_set:
-               my_prediction = 'Benign'
+               my_prediction = 'Breast Cancer class is Benign'
             else:
-               my_prediction= 'Malignant'
+               my_prediction= 'Breast Cancer class is Malignant'
             return render_template('index.htm', prediction_text=my_prediction)
 
 
