@@ -10,14 +10,10 @@ import numpy as np
 from sklearn import preprocessing, model_selection, neighbors
 import pandas as pd
 import pickle
-#import ctypes
-#print (ctypes.sizeof(ctypes.c_voidp))
-#import platform
-#print (platform.architecture()) 
+
 df = pd.read_csv('breast-cancer-dataset.data')
 df.replace('?', -9999, inplace=True)
-df.drop(['id'], 1, inplace=True) #id nachaiena vaeko le hataideko .outlier hunxa dataset ma so
-print(df.head())
+df.drop(['id'], 1, inplace=True) 
 X = np.array(df.drop(['class'], 1)) #class is used as label(output) and all others are features representing X
 y = np.array(df['class'])
 
